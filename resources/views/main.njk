@@ -1,7 +1,7 @@
 {% extends "layout" %}
 
 {% block content %}
-<h1>{{name}}</h1>
+<!--<h1>{{name}}</h1>-->
 
 <div class="row">
 {% for category in categories %}
@@ -12,8 +12,8 @@
 
       <!-- List group -->
       <ul class="list-group">
-        {% for recipe in category.recipes %}
-        <li class="list-group-item">{{recipe}}</li>
+        {% for recipe in category.topRecipes %}
+        <li class="list-group-item">{{recipe.name}}</li>
         {% endfor %}
       </ul>
     </div>
