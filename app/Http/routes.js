@@ -17,7 +17,8 @@
 
 const Route = use('Route')
 
-Route.on('/').render('main')
+//Route.on('/').render('main')
 // Route.get('/hello', function * (req,res){
 //     yield res.sendView('welcome');
 // })
+Route.get('/', 'RecipeController.index')
