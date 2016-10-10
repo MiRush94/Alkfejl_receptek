@@ -25,6 +25,7 @@
     "App": "./app"
   },
   "devDependencies": {
+    "express-admin": "^1.2.8",
     "nodemon": "^1.9.1"
   }
 }
