@@ -3,7 +3,7 @@
 const Lucid = use('Lucid')
 
 class Category extends Lucid {
-    recipe(){
+    recipes(){
         return this.hasMany('App/Model/Recipe')
     }
 }

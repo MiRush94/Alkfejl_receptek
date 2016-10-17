@@ -22,3 +22,5 @@ const Route = use('Route')
 //     yield res.sendView('welcome');
 // })
 Route.get('/', 'RecipeController.index')
+Route.get('/recipes/create', 'RecipeController.create')
+Route.post('/recipes/create', 'RecipeController.doCreate')
