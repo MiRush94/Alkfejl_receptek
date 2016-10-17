@@ -3,7 +3,7 @@
 {% block content %}
 
 <h2>{{ recipe.name }}</h2>
-<p>{{ recipe.category() }}</p>
+<p>{{ recipe.category.name }}</p>
 <h3>Hozzávalók</h3>
 <pre>
 {{ recipe.ingredients }}

@@ -2,20 +2,18 @@
 
 {% block content %}
 <h2> Új Recept </h2>
-
+{% if old('errors') %}
 <div class="panel panel-danger">
     <div class="panel-heading">Hibák</div>
     <div class="panel-body">
-        {% if old('errors') %}
             <ul>
                 {% for error in old('errors') %}
                 <li>{{ error.message }}</li>
                 {% endfor %}
             </ul>
-        {% endif %}
     </div>
 </div>
-
+{% endif %}
 
 
 <form class="form-horizontal" method="post">

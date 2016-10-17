@@ -1,6 +1,7 @@
 'use strict'
 const Database = use('Database')
 const Category = use('App/Model/Category')
+const Recipe = use('App/Model/Recipe')
 const Validator = use('Validator')
 
 class RecipeController {
