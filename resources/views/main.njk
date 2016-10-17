@@ -13,7 +13,9 @@
       <!-- List group -->
       <ul class="list-group">
         {% for recipe in category.topRecipes %}
-        <li class="list-group-item">{{recipe.name}}</li>
+        <li class="list-group-item">
+          <a href="/recipes/{{recipe.id}}"></a>
+          {{recipe.name}}</li>
         {% endfor %}
       </ul>
     </div>
