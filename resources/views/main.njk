@@ -11,13 +11,14 @@
       <div class="panel-heading">{{ category.name }}</div>
 
       <!-- List group -->
-      <ul class="list-group">
-        {% for recipe in category.topRecipes %}
-        <li class="list-group-item">
-          <a href="/recipes/{{recipe.id}}">{{ recipe.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="panel-body" style="min-height:150px; max-height:150px; owerflow-y:scorll;">
+        <!--<ul class="list-group">-->
+          {% for recipe in category.topRecipes %}
+          <!--<li class="list-group-item">-->
+            <li style="list-style:none;"><a href="/recipe/{{recipe.id}}">{{ recipe.name }}</a></li>
+          {% endfor %}
+        <!--</ul>-->
+      </div>
     </div>
   </div>
 {% endfor %}

@@ -53,6 +53,22 @@ class RecipeController {
         response.redirect('/')
     }
 
+    * showEdit(request,response){
+        const id = request.param('id');
+        const recipe = yield Recipe.find(id);
+        yield recipe.related('category').load();
+
+        yield response.sendView('editRecipe',{
+            recipe: recipe.toJSON()
+        })
+    }
+
+    * edit(request, response){
+        const recipeData = request.except('_csrf')
+        const recipe = yield Recipe.save(recipData);
+        response.redirect('/recipeShow/:id')
+    }
+
     * show(request, response){
         const id = request.param('id');
         const recipe = yield Recipe.find(id);
